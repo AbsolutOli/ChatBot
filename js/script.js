@@ -33,6 +33,7 @@ const generateResponse = (incomingChatLi) => {
         .then((data) => {
             messageElement.textContent = `Not ${data.body}`;
         }).catch((error) => {
+            messageElement.classList.add('error');
             messageElement.textContent = "Oops! Something went wrong. Please try again.";
         }).finally(() => {
             chatbox.scroll(0, chatbox.scrollHeight);

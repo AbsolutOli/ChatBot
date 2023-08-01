@@ -190,6 +190,10 @@ body {
   border-radius: 10px 10px 0 10px;
   background-color: #8235ff;
 }
+.chatbot .chatbox .chat p.error {
+  color: #721c24;
+  background-color: #f8d7da;
+}
 .chatbot .chatbox .incoming p {
   color: #000;
   background-color: #F2F2F2;
