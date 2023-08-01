@@ -8,8 +8,9 @@ const API_KEY = "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";
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add('chat', className);
-    let chatContent = className === "outgoing" ? `<p>${message}</p>` : `<span class="material-symbols-outlined">smart_toy</span><p>${message}</p>`;
+    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p>${message}</p>`;
     chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
     return chatLi;
 }
 
@@ -58,6 +59,7 @@ const generateResponse = (incomingChatLi) => {
 const handleChat = () => {
     userMessage = chatInput.value.trim();
     if (!userMessage) return;
+    chatInput.value = "";
 
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
     chatbox.scroll(0, chatbox.scrollHeight);
