@@ -235,6 +235,7 @@ body {
   border: none;
   outline: none;
   font-size: 0.95rem;
+  max-height: 180px;
   resize: none;
   padding: 16px 15px 16px 0;
 }
